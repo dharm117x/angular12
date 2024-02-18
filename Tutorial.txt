@@ -1,8 +1,15 @@
-1. Interploation-display dynamic data on page.
+Create Projeccts:
+ng new Lab1 --skip-install
+
+create symblink with node modules for new project:
+mklink /d node_modules D:\programs\angular12\node_modules
+
+
+Interploation-display dynamic data on page.
 ts- componet variable
 html- {{title}}
 
-2. Agular CLI:
+Agular CLI:
 - craete componet: 
 default location inside src/app and genrate total 4 files and update app module.ts files
 html-
@@ -29,6 +36,11 @@ One component use inside component by using selector of component in first compn
 -crearte module- have multiplae components
 ng g m user-module
 ng g c user-module/sign-in
+
+-- crate module with inside routing.
+ng g m admin --routing
+ng g c admin/login
+
 
 Regsiter module inside app.module.ts inside imports.
 

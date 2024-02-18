@@ -1,0 +1,28 @@
+<h2>{{title}}</h2>
+<p>Offline users</p>
+  <ul>
+    <li><a routerLink="admin/login">Admin Login</a></li>
+  </ul>
+
+  <ul>
+    <li><a routerLink="user/login">User Login</a></li>
+  </ul>
+
+  <router-outlet></router-outlet>
+
+   <ul>
+    <li *ngFor="let data of datas">
+      {{data.id}}---{{data.name}}
+    </li>
+  </ul>
+
+
+  <p>Online users</p>
+   <ul>
+    <li *ngFor="let data of users">
+      {{data.name}}
+    </li>
+  </ul>
+  
+
+<app-footer></app-footer>

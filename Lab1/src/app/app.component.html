@@ -5,15 +5,15 @@
 <br>
 
 <input type="text" #data (keyup)="getData(data.value)" placeholder="event keyup"/>
-<button (click)="getName('DK')"> Click me</button>
 <br>
 
 <input type="text" #data1 placeholder="input value"/>
 <button (click)="getData(data1.value)"> Click me</button>
 Data:: {{display}}
+<br>
+<button (click)="getName('DK')"> Click me</button>
 
 <br>
 <app-login></app-login>
 <app-register></app-register>
 <app-menue></app-menue>
-<app-sign-in></app-sign-in>

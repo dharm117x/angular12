@@ -9,6 +9,7 @@ import { MenueComponent } from './menue/menue.component';
 import { UserModuleModule } from './user-module/user-module.module';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
+import { NopageComponent } from './nopage/nopage.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     RegisterComponent,
     MenueComponent,
-    HeaderComponent
+    HeaderComponent,
+    NopageComponent
   ],
   imports: [
     BrowserModule,
