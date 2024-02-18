@@ -1,0 +1,14 @@
+<p class="red">login works!</p>
+<form #basicform="ngForm" (ngSubmit)="getFormData(basicform.value)">
+    <input type="text" ngModel name="username" placeholder="userbane"/>
+    <br>
+    <input type="password" ngModel name="password" placeholder="*********"/>
+    <br>
+    <button>Login</button>
+
+    <h3>
+        Username:: {{userData.username}}
+
+    </h3>
+
+</form>

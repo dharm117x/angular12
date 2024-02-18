@@ -1,0 +1,19 @@
+<app-header></app-header>
+<h2>Lab1 Angular lab1- {{title}}</h2>
+
+{{name}}
+<br>
+
+<input type="text" #data (keyup)="getData(data.value)" placeholder="event keyup"/>
+<button (click)="getName('DK')"> Click me</button>
+<br>
+
+<input type="text" #data1 placeholder="input value"/>
+<button (click)="getData(data1.value)"> Click me</button>
+Data:: {{display}}
+
+<br>
+<app-login></app-login>
+<app-register></app-register>
+<app-menue></app-menue>
+<app-sign-in></app-sign-in>

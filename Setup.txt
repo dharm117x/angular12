@@ -1,0 +1,64 @@
+Step 1. Install node.js for windows by msi:
+node --version
+v14.16.0
+
+Step 2. Install yarn by command:
+npm install --global yarn
+
+yarn --version
+1.22.19
+
+npm --v
+6.14.11
+
+npm cache verify
+
+Step3: Install aggular cli by command:
+
+npm install -g @angular/cli -- latest version , g for globally
+
+npm uninstall -g @angular/cli
+
+npm install -g @angular/cli@12.2.0
+
+ng --version
+
+yarn install - fixed package issue.
+
+--------------------------------------------
+SPARTCUS Hybris 2011
+----------------------------
+Angular CLI: Version 12.0.5 or later, < 13.
+Yarn: Version 1.15 or later.
+Node.js: Version 14.15 is required.
+
+ng new powertools --style=scss --skip-install
+
+cd powertools-store
+
+ng add @spartacus/schematics --pwa
+
+yarn start
+
+-----------------
+
+ng add @spartacus/schematics@latest --base-url https://localhost:9002/ --baseSite=powertools-spa --currency=usd,eur --language=en,de --ssr
+
+--------------------------
+Test Angular 12
+====================
+ng new tutorials --style=scss
+ng g s services/tutorial
+
+ng g c components/add-tutorial
+ng g c components/tutorial-details
+ng g c components/tutorials-list
+
+ng g class models/tutorial --type=model
+
+--------------------------------------------
+Code Short cut
+
+1. ctrl shift f --> content search
+2. ctrl P --> File search
+
