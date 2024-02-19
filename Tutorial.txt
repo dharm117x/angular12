@@ -56,3 +56,7 @@ ng genrate class user-module/Dummy
 ng g  interface DummyInterface
 
 
+-Directive:Its provide additional feature to attributes.
+ng g directive redEL
+
+ex *ngIf, *ngFor etc.
