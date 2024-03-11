@@ -1,0 +1,13 @@
+<p>server-component works!</p>
+<button 
+    class="btn btn-primary"
+    [disabled]="!allowedServer" (click)="addServer()">Add server</button>
+
+ <br/>
+ 
+ <p>{{server}}</p>
+
+ <p *ngIf="server else noServer">Server is created server {{server}}</p>
+ <ng-template #noServer>
+    <p>No Server was created</p>
+ </ng-template>
