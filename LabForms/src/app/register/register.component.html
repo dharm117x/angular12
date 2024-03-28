@@ -1,0 +1,29 @@
+<div class="container">
+    <h3>Register form</h3>
+
+    <div class="row">
+        <br>
+        <form [formGroup]="regForm" (ngSubmit)="onSubmit()" class="form">
+
+            <label for="first-name">First Name: </label>
+            <input id="first-name" type="text" formControlName="firstName">
+            <label for="email">Email: </label>
+            <input id="email" type="text" formControlName="email">
+            <label for="username">Username: </label>
+            <input id="username" type="text" formControlName="username">
+            <label for="password">Password: </label>
+            <input id="password" type="password" formControlName="password">
+            <label for="phone">Phone: </label>
+            <input id="phone" type="text" formControlName="phone">
+            <label for="gender">Gender: </label>
+            <input id="gender" type="text" formControlName="gender">
+
+            <p>Complete the form to enable button.</p>
+            <p>Form Status: {{ regForm.status }}</p>
+            <button type="submit" [disabled]="!regForm.valid">Submit</button>
+
+        </form>
+
+    </div>
+
+</div>
