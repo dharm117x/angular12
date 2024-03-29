@@ -1,0 +1,46 @@
+<div class="container">
+
+    <h3>{{form.title}}</h3>
+    <div class="row">
+
+        <form [formGroup]="dynamicFormGroup" (ngSubmit)="onSubmit()">
+            <ng-container *ngFor="let c of form.formControlls">
+                <div [class]="c.class" *ngIf="['text','email','password','date'].includes(c.type)">
+                    <label class="form-level">{{c.level}}</label>
+                    <input class="form-control" [type]="c.type" formControlName="{{c.name}}">
+                    <small *ngIf="!isValid(c)" class="text-danger">{{getValidationError(c)}}</small>
+                </div>
+                <div [class]="c.class" *ngIf="c.type === 'select'">
+                    <label class="form-level">{{c.level}}</label>
+                    <select class="form-select" formControlName="{{c.name}}" aria-label="Default select example">
+                        <option selected value="">Choose..</option>
+                        <ng-container *ngFor="let opt of c.options">
+                            <option value="{{opt.id}}">{{opt.value}}</option>
+                        </ng-container>
+                    </select>
+                    <small *ngIf="!isValid(c)" class="text-danger">{{getValidationError(c)}}</small>
+                </div>
+        
+                <div [class]="c.class" *ngIf="c.type === 'radio'">
+                    <label>{{c.level}}</label>
+                    <ng-container *ngFor="let ro of c.radioOptions">
+                        <div class="form-check">
+                            <input class="form-check-input" formControlName="{{c.name}}" [type]="c.type" [value]="ro">
+                            <label class="form-check-level" for="c.name">{{ro}}</label>
+                        </div>
+                    </ng-container>
+                    <small *ngIf="!isValid(c)" class="text-danger">{{getValidationError(c)}}</small>
+                </div>  
+        
+            </ng-container>
+            <div class="col-12">
+                <button class="btn btn-primary mx-2" (click)="onSubmit()">{{form.saveBtnLevel}}</button>
+                <button class="btn btn-primary mx-2" (click)="resetForm()">{{form.resetBtnLevel}}</button>
+                <p>Form Status: {{ dynamicFormGroup.status }}</p>
+                <p>Form Value: {{ dynamicFormGroup.value | json}}</p>
+            </div>
+        
+        
+        </form>
+    </div>
+</div>
